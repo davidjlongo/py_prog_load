@@ -75,7 +75,7 @@ class ProgLoader:
                 Union[List[str], str]],
             *args, **kwargs):  # ->int
         setup_logging(logging.DEBUG)
-        self = cls(kwargs.get("paths"))
+        self = cls(kwargs.get("paths"), kwargs)
         pathsList = self._paths
         count_dict: Dict = None
         l_count_dict: Lock = Lock()
